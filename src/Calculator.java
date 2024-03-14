@@ -14,11 +14,11 @@ public class Calculator {
 }
 
 class Main {
-    String exception = "throws Exception";
+    static String exception = "throws Exception";
 
     public static String calc(String input) {
-        String exception = "throws Exception";
-        String numeralSet = "";
+//        String exception = "throws Exception";
+        String numeralSet;
         String[] splitedExpr = input.split(" ");
         String result = "";
         Main rules = new Main();
@@ -40,7 +40,8 @@ class Main {
                     break;
             }
         } catch (MyException my) {
-            System.out.println(exception);
+//            System.out.println(exception);
+            return result = exception;
         }
         return result;
     }
@@ -78,7 +79,7 @@ class Main {
 
     private String arabToRoman(int arabNumber) {                                  //арабский в римский
         String result = "";
-        int value = 0;
+        int value;
         int[] arab = {100, 90, 50, 40, 10, 9, 5, 4, 1};
         String[] roman = {"C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
         for (int i = 0; i < arab.length; i++) {
